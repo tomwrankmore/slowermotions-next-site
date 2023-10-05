@@ -22,7 +22,7 @@ const myPortableTextComponents = {
     },
   },
   marks: {
-    link: ({children, value}) => {
+    link: ({children, value}:any) => {
       return (
         <a href={value.href} rel='noreferrer noopener' target="_blank">
           {children}
@@ -32,7 +32,7 @@ const myPortableTextComponents = {
   },
 };
 
-function Body({ blocks }) {
+function Body({ blocks }:any) {
   return <PortableText value={blocks} components={myPortableTextComponents} />;
 }
 
