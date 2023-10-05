@@ -12,12 +12,12 @@ export const youtube = defineType({
       type: 'url',
     }),
   ],
-  preview: {
-    select: {
-      url: 'url',
-    },
-  },
-  components: {
-    preview: YouTubePreview,
-  },
+  // preview: {
+  //   select: {
+  //     url: 'url',
+  //   },
+  // },
+  // components: {
+  //   preview: YouTubePreview,
+  // },
 })

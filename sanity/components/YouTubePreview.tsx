@@ -6,8 +6,8 @@ interface PreviewYouTubeProps extends PreviewProps {
   url: string
 }
 
-export function YouTubePreview({url}: PreviewYouTubeProps) {
-  // const {url} = props
+export function YouTubePreview(props: PreviewYouTubeProps) {
+  const {url} = props
   // const url = selection?.url
   return (
     <Flex padding={4} justify={'center'}>
