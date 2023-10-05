@@ -53,3 +53,5 @@ const Project = async ({ params }: Props) => {
 };
 
 export default Project;
+
+export const revalidate = 60;
