@@ -2,6 +2,7 @@ import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Body from "../../components/Body";
+import Link from "next/link";
 
 type Props = {
   params: { project: string };
@@ -35,9 +36,8 @@ const Project = async ({ params }: Props) => {
           />
         )} */}
       </div>
-      {project?.url && (
         <div>
-          <a
+          {/* <a
             href={project.url}
             title="View Project"
             target="_blank"
@@ -45,9 +45,14 @@ const Project = async ({ params }: Props) => {
             className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-black hover:text-slate-100 transition block"
           >
             View project
-          </a>
+          </a> */}
+          <Link
+            href="/"
+            className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-black hover:text-slate-100 transition block"
+          >
+            Back home &#x2196;
+          </Link>
         </div>
-      )}
     </div>
   );
 };
