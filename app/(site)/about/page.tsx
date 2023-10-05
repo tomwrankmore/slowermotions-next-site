@@ -3,7 +3,7 @@ import React from "react";
 const about = () => {
   return (
   <div className="prose lg:prose-xl">
-    <p>I&apos;ve been producing music professionally for over a decade.</p>
+    <p className="text-sm mb-6">I&apos;ve been at it for a while.</p>
   </div>
   );
 };
