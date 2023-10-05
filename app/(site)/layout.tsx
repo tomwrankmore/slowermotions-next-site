@@ -1,10 +1,11 @@
 import { getPages } from "@/sanity/sanity-utils";
 import "../globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Jost, Figtree } from "next/font/google";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const jost = Jost({ subsets: ["latin"] });
+const figtree = Figtree({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,33 +26,44 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} p-10`}>
+      <body className={`${figtree.className} p-10 flex flex-col min-h-screen`}>
         <header className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg font-bold"
-          >
+          <Link href="/" className="text-lg font-bold uppercase">
             repetition world
           </Link>
 
           <div className="flex items-center gap-3">
-            {pages.map((page) => {
+            {/* {pages.map((page) => {
               return (
                 <Link
                   key={page._id}
                   href={`/${page.slug}`}
-                  className="hover:underline"
+                  className="hover:underline text-sm uppercase"
                 >
                   {page.title}
                 </Link>
               );
-            })}
+            })} */}
+            <Link
+              href="/about"
+              className="hover:underline text-sm uppercase"
+            >
+              about
+            </Link>
+            <Link
+              href="contact"
+              className="hover:underline text-sm uppercase"
+            >
+              contact
+            </Link>
           </div>
         </header>
 
-        <main className="py-20">{children}</main>
+        <main className="py-20 flex-1">{children}</main>
 
-        <footer><p className="text-xs text-center">&copy; {yyyy}</p></footer>
+        <footer>
+          <p className="text-xs text-center">&copy; {yyyy}</p>
+        </footer>
       </body>
     </html>
   );

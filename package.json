@@ -10,14 +10,19 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.9",
+    "@sanity/orderable-document-list": "^1.1.0",
+    "@sanity/ui": "^1.8.2",
     "next": "latest",
     "next-sanity": "^5.5.4",
     "react": "latest",
     "react-dom": "latest",
+    "react-player": "^2.13.0",
+    "react-youtube": "^10.1.0",
     "sanity": "^3.16.7",
     "styled-components": "^6.0.8"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
