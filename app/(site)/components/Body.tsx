@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 
 const myPortableTextComponents = {
   types: {
-    youtube: ({ value }) => {
+    youtube: ({value}:any) => {
       const { url } = value;
       return (
         <div className="relative pt-[56.25%]">
