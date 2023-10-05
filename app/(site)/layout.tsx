@@ -29,7 +29,7 @@ export default async function RootLayout({
       <body className={`${figtree.className} p-10 flex flex-col min-h-screen`}>
         <header className="flex items-center justify-between">
           <Link href="/" className="text-lg font-bold uppercase">
-            repetition world
+            repetition world.
           </Link>
 
           <div className="flex items-center gap-3">
