@@ -2,11 +2,11 @@ import { getPages } from "@/sanity/sanity-utils";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Jost, Figtree } from "next/font/google";
-import Link from "next/link";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const jost = Jost({ subsets: ["latin"] });
-const figtree = Figtree({ subsets: ["latin"] })
+const figtree = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,23 +18,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // get all pages
-
-  const pages = await getPages();
-
-  const today = new Date();
-  const yyyy = today.getFullYear();
-
   return (
     <html lang="en">
       <body className={`${figtree.className} p-10 flex flex-col min-h-screen`}>
         <Header />
-
         <main className="py-20 flex-1">{children}</main>
-
-        <footer>
-          <p className="text-xs text-center">&copy; {yyyy}</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

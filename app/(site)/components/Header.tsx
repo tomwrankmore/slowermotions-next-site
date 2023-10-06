@@ -27,7 +27,7 @@ const Header = () => {
           audio archive
         </Link>
         <Link href="/releases" className="hover:underline text-sm uppercase">
-          audio archive
+          release archive
         </Link>
         <Link href="contact" className="hover:underline text-sm uppercase">
           contact
