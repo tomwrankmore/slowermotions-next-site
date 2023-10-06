@@ -8,6 +8,9 @@ import { Spotify } from "react-spotify-embed";
 
 const myPortableTextComponents = {
   types: {
+    break: () => {
+      return <br/>;
+    },
     youtube: ({value}:any) => {
       const { url } = value;
       return (

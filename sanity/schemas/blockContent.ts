@@ -16,6 +16,9 @@ export const blockContent = defineType({
     }),
     defineArrayMember({
       type: 'spotify'
+    }),
+    defineArrayMember({
+      type: 'break'
     })
   ]
 })

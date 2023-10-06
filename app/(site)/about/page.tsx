@@ -8,10 +8,10 @@ const about = () => {
   return (
     <div className="prose lg:prose-xl">
       <p className="text-sm mb-6">I&apos;ve been at it for a while.</p>
-      <ReactPlayer
+      {/* <ReactPlayer
         className=""
         url="https://soundcloud.com/joy-orbison/tentative-bidding-demo"
-      />
+      /> */}
     </div>
   );
 };
