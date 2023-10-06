@@ -24,10 +24,10 @@ const Header = () => {
           about
         </Link>
         <Link href="/audio" className="hover:underline text-sm uppercase">
-          audio archive
+          audio
         </Link>
         <Link href="/releases" className="hover:underline text-sm uppercase">
-          release archive
+          releases
         </Link>
         <Link href="contact" className="hover:underline text-sm uppercase">
           contact
