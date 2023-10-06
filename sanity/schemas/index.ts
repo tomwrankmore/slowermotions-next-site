@@ -5,7 +5,7 @@ import { blockContent } from "./blockContent";
 import {youtube} from './youtube'
 import {soundcloud} from './soundcloud'
 import {spotify} from './spotify'
-import {breaker} from './break'
+import breaker from './break'
 import siteSettings from "./siteSettings";
 import colors from "./colors";
 import navigation from "./navigation";
