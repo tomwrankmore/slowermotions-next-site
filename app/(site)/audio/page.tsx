@@ -3,7 +3,7 @@ import React from 'react'
 const audioArchive = () => {
   return (
     <div>
-      <h1>Audio archive, to be populated soon.</h1>
+      <p className='text-sm'>Audio archive, to be populated soon.</p>
     </div>
   )
 }
