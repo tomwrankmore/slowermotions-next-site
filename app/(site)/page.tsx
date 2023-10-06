@@ -9,11 +9,11 @@ export default async function Home() {
     <div>
       <h1 className="text-3xl mb-12 w-full md:w-3/4">Tom / Eliphino is a London based music producer, DJ &amp; composer.</h1>
       
-      <ul className="w-fit">
+      <ul className="w-full md:w-fit">
         {projects.map((project) => {
           return (
             <li key={project._id} className="[&:not(:last-child)]:border-b">
-              <Link href={`/projects/${project.slug}`} className="p-4 block whitespace-nowrap hover:bg-gray-100 transition">
+              <Link href={`/projects/${project.slug}`} className="p-4 block md:whitespace-nowrap hover:bg-gray-100 transition">
                 {project?.name}
               </Link>
             </li>

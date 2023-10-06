@@ -3,23 +3,23 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-center justify-between flex-col md:flex-row">
       <Link href="/" className="text-lg font-bold uppercase">
         repetition
       </Link>
 
       <div className="flex items-center gap-3">
         {/* {pages.map((page) => {
-              return (
-                <Link
-                  key={page._id}
-                  href={`/${page.slug}`}
-                  className="hover:underline text-sm uppercase"
-                >
-                  {page.title}
-                </Link>
-              );
-            })} */}
+          return (
+            <Link
+              key={page._id}
+              href={`/${page.slug}`}
+              className="hover:underline text-sm uppercase"
+            >
+              {page.title}
+            </Link>
+          );
+        })} */}
         <Link href="/about" className="hover:underline text-sm uppercase">
           about
         </Link>

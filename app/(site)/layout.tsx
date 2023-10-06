@@ -20,7 +20,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${figtree.className} p-10 flex flex-col min-h-screen`}>
+      <body className={`${figtree.className} p-4 sm:p-10 flex flex-col min-h-screen`}>
         <Header />
         <main className="py-20 flex-1">{children}</main>
         <Footer />
