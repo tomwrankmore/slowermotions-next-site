@@ -4,6 +4,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 import { PortableText } from "@portabletext/react";
+import { Spotify } from "react-spotify-embed";
 
 const myPortableTextComponents = {
   types: {
@@ -17,6 +18,27 @@ const myPortableTextComponents = {
             width="100%"
             height="100%"
           />
+        </div>
+      );
+    },
+    soundcloud: ({value}:any) => {
+      const { url } = value;
+      return (
+        <div>
+          <ReactPlayer
+            className=""
+            url={url}
+            width="100%"
+            height="100%"
+          />
+        </div>
+      );
+    },
+    spotify: ({value}:any) => {
+      const { url } = value;
+      return (
+        <div className="mb-12">
+          <Spotify wide link={url} />
         </div>
       );
     },

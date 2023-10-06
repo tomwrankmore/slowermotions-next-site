@@ -1,3 +1,4 @@
+import React from "react";
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
@@ -20,7 +21,7 @@ const Project = async ({ params }: Props) => {
         </header>
 
         {/* Content goes here */}
-        <div className="text-lg text-gray-700 mt-5 w-3/4 prose prose-slate lg:prose-lg">
+        <div className="text-lg text-gray-700 mt-5 w-full lg:w-3/4 prose prose-slate lg:prose-lg">
           <Body blocks={project.content} />
           {/* <PortableText value={project.content} /> */}
         </div>
@@ -36,8 +37,8 @@ const Project = async ({ params }: Props) => {
           />
         )} */}
       </div>
-        <div>
-          {/* <a
+      <div className="mt-16 lg:mt-0">
+        {/* <a
             href={project.url}
             title="View Project"
             target="_blank"
@@ -46,13 +47,13 @@ const Project = async ({ params }: Props) => {
           >
             View project
           </a> */}
-          <Link
-            href="/"
-            className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-black hover:text-slate-100 transition block"
-          >
-            Back home &#x2196;
-          </Link>
-        </div>
+        <Link
+          href="/"
+          className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-black hover:text-slate-100 transition block"
+        >
+          Back home &#x2196;
+        </Link>
+      </div>
     </div>
   );
 };

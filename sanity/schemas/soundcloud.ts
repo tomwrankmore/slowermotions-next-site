@@ -1,9 +1,8 @@
 import {defineField, defineType} from 'sanity'
-import {YouTubePreview} from '../components/YouTubePreview'
 
-export const youtube = defineType({
-  name: 'youtube',
-  title: 'Youtube',
+export const soundcloud = defineType({
+  name: 'soundcloud',
+  title: 'Soundcloud',
   type: 'object',
   fields: [
     defineField({

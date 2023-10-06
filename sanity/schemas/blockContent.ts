@@ -10,6 +10,12 @@ export const blockContent = defineType({
     }),
     defineArrayMember({
       type: 'youtube'
+    }),
+    defineArrayMember({
+      type: 'soundcloud'
+    }),
+    defineArrayMember({
+      type: 'spotify'
     })
   ]
 })
