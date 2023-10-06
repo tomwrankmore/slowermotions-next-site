@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between">
       <Link href="/" className="text-lg font-bold uppercase">
-        repetition world.
+        repetition
       </Link>
 
       <div className="flex items-center gap-3">
