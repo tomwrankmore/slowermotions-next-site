@@ -7,7 +7,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className="text-3xl mb-12 w-full md:w-3/4">Tom / Eliphino is a London based music producer, DJ &amp; composer.</h1>
+      <h1 className="text-center md:text-left text-xl md:text-3xl mb-12 w-full md:w-[40rem] tracking-[0.5rem]">Tom / Eliphino is a London based music producer, DJ &amp; composer.</h1>
       
       <ul className="w-full md:w-fit">
         {projects.map((project) => {
