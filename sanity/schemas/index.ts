@@ -1,6 +1,6 @@
 import interview from "./schemas/interview-schema";
 import project from "./schemas/project-schema";
-import page from "./schemas/page-schema";
+import categories from "./schemas/categories";
 import projectYouTubeLink from "./schemas/project-youtube-links";
 import { blockContent } from "./arrays/blockContent";
 import { youtube } from "./objects/youtube";
@@ -22,6 +22,7 @@ const schemas = [
   siteSettings,
   spotify,
   figure,
+  categories
 ];
 
 export default schemas;

@@ -1,9 +1,9 @@
-import React from "react";
 import { getInterview } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Body from "../../components/Body";
 import Link from "next/link";
+import Mix from "../../components/Mix";
 
 type Props = {
   params: { interview: string };
@@ -14,16 +14,15 @@ const Interview = async ({ params }: Props) => {
 
   const interview = await getInterview(slug);
 
-  console.log('interview:', interview)
-
   return (
     <div className="flex items-start justify-between flex-col lg:flex-row">
       <div>
         <header>
-          <h1 className="text-2xl">{interview.name}</h1>
+          <h1 className="text-2xl mb-8">{interview.title}</h1>
         </header>
 
         <div className="w-full prose prose-slate lg:prose-lg">
+          {interview.mixUrl != null ? <Mix interview={interview} /> : null}
           <Body blocks={interview.body} />
         </div>
       </div>

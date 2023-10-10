@@ -5,6 +5,7 @@ _id: string;
 _createdAt: Date;
 slug: string;
 alt: string;
+mixUrl: URL;
 name: string;
 title: string;
 image: string;

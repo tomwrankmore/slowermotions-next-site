@@ -23,14 +23,26 @@ const interview = {
       }
     },
     {
+      title: 'Category',
+      name: 'category',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {type: 'categories'}
+        }
+      ]
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule projects where you show them',
       type: 'datetime'
     },
     {
-      name: "url",
-      title: "URL",
+      name: "mixUrl",
+      title: "Mix URL",
+      description: 'If this is a page that displays a mix, chuck the full URL in here.',
       type: "url",
     },
     {

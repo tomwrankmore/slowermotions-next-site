@@ -46,7 +46,7 @@ export async function getInterview(slug: string): Promise<Interview> {
       title,
       "slug": slug.current,
       // "image": image.asset->url,
-      // url,
+      mixUrl,
       publishedAt,
       body
     }`,
