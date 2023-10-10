@@ -1,12 +1,13 @@
 import { PortableTextBlock } from "sanity";
 
-export type Project = {
+export type Interview = {
 _id: string;
 _createdAt: Date;
 slug: string;
 alt: string;
 name: string;
+title: string;
 image: string;
 url: string;
-content: PortableTextBlock[];
+body: PortableTextBlock[];
 }

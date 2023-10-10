@@ -4,10 +4,10 @@ import schemas from "./sanity/schemas";
 import { myStructure } from "./sanity/components/deskStructure";
 
 const config = defineConfig({
-  projectId: "49wa66pl",
+  projectId: "kpnaxz28",
   dataset: "production",
-  title: "Repetition Composition Portfolio",
-  apiVersion: "02-10-2023",
+  title: "Slower Motions Next App",
+  apiVersion: "09-10-2023",
   basePath: "/studio",
   plugins: [
     deskTool({

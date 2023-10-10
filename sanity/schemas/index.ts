@@ -1,18 +1,19 @@
-import project from "./project-schema";
-import page from "./page-schema";
-import projectYouTubeLink from "./project-youtube-links";
-import { blockContent } from "./blockContent";
-import {youtube} from './youtube'
-import {soundcloud} from './soundcloud'
-import {spotify} from './spotify'
-import breaker from './break'
-import siteSettings from "./siteSettings";
-import colors from "./colors";
-import navigation from "./navigation";
+import interview from "./schemas/interview-schema";
+import project from "./schemas/project-schema";
+import page from "./schemas/page-schema";
+import projectYouTubeLink from "./schemas/project-youtube-links";
+import { blockContent } from "./arrays/blockContent";
+import { youtube } from "./objects/youtube";
+import { soundcloud } from "./objects/soundcloud";
+import { spotify } from "./objects/spotify";
+import breaker from "./objects/break";
+import siteSettings from "./schemas/siteSettings";
+import { figure } from "./objects/figure";
 
 const schemas = [
-  project,
-  page,
+  interview,
+  // project,
+  // page,
   // projectYouTubeLink,
   blockContent,
   youtube,
@@ -20,8 +21,7 @@ const schemas = [
   soundcloud,
   siteSettings,
   spotify,
-  // colors,
-  // navigation,
-]
+  figure,
+];
 
-export default schemas
+export default schemas;

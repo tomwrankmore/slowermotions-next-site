@@ -1,11 +1,17 @@
 import Link from "next/link";
 import React from "react";
+import { getSiteSettings } from "@/sanity/sanity-utils";
+import Image from "next/image";
 
-const Header = () => {
+export default async function Header() {
+
+  const siteSettings = await getSiteSettings();
+
   return (
     <header className="flex items-center justify-between flex-col md:flex-row">
-      <Link href="/" className="text-lg font-bold uppercase">
-        repetition
+      {/* {} */}
+      <Link href="/" className="text-3xl font-bold lowercase">
+        slower<span className="italic inline-block -translate-x-[1.75px]">m</span>otions
       </Link>
 
       <div className="flex items-center gap-3">
@@ -14,27 +20,19 @@ const Header = () => {
             <Link
               key={page._id}
               href={`/${page.slug}`}
-              className="hover:underline text-sm uppercase"
+              className="hover:underline text-sm lowercase"
             >
               {page.title}
             </Link>
           );
         })} */}
-        <Link href="/about" className="hover:underline text-sm uppercase">
-          about
+        <Link href="/archive" className="hover:underline text-sm lowercase">
+          archive
         </Link>
-        <Link href="/audio" className="hover:underline text-sm uppercase">
-          audio
-        </Link>
-        <Link href="/releases" className="hover:underline text-sm uppercase">
-          releases
-        </Link>
-        <Link href="contact" className="hover:underline text-sm uppercase">
+        {/* <Link href="contact" className="hover:underline text-sm lowercase">
           contact
-        </Link>
+        </Link> */}
       </div>
     </header>
   );
 };
-
-export default Header;

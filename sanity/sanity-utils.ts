@@ -1,35 +1,54 @@
-import { Project } from "@/types/Project";
+import { Interview } from "@/types/Interview";
 import { Page } from "../types/Page";
+import { SiteSettings } from "../types/SiteSettings";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config"
 
-export async function getProjects(): Promise<Project[]> {
+export async function getSiteSettings(): Promise<SiteSettings[]> {
 
   return createClient(clientConfig).fetch(
-    groq`*[_type == "project"]|order(orderRank){
+    groq`*[_type == "siteSettings"]{
       _id,
       _createdAt,
-      name,
-      "slug": slug.current,
-      "image": image.asset->url,
-      url,
-      content
+      title,
+      description,
+      "navLogo": navLogo.asset->url,
+      keywords
     }`
   );
 }
 
-export async function getProject(slug: string): Promise<Project> {
+export async function getInterviews(): Promise<Interview[]> {
 
   return createClient(clientConfig).fetch(
-    // project where slug.current is the same as the slug we pass in to getProject
-    groq`*[_type == "project" && slug.current == $slug][0]{
+    groq`*[_type == "interview"]|order(orderRank){
       _id,
       _createdAt,
       name,
+      title,
       "slug": slug.current,
-      "image": image.asset->url,
-      url,
-      content
+      // "image": image.asset->url,
+      // url,
+      publishedAt,
+      body
+    }`
+  );
+}
+
+export async function getInterview(slug: string): Promise<Interview> {
+
+  return createClient(clientConfig).fetch(
+    // interview where slug.current is the same as the slug we pass in to getInterview
+    groq`*[_type == "interview" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      name,
+      title,
+      "slug": slug.current,
+      // "image": image.asset->url,
+      // url,
+      publishedAt,
+      body
     }`,
     // the line below is how we pass in slug as a value from the function argument
     { slug }
