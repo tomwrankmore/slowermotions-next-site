@@ -9,6 +9,7 @@ const Mix = ({ interview }: any) => {
         className=""
         url={interview.mixUrl}
         height="100%"
+        width="100%"
       />
     </>
   );

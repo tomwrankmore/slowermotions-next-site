@@ -16,13 +16,14 @@ const Interview = async ({ params }: Props) => {
 
   return (
     <div className="flex items-start justify-between flex-col lg:flex-row">
-      <div>
-        <header>
-          <h1 className="text-2xl mb-8">{interview.title}</h1>
-        </header>
+      <div className="flex-1 w-full">
+        <h1 className="text-2xl mb-8">{interview.title}</h1>
+
+        <div>
+          {interview.mixUrl != null ? <Mix interview={interview} /> : null}
+        </div>
 
         <div className="w-full prose prose-slate lg:prose-lg">
-          {interview.mixUrl != null ? <Mix interview={interview} /> : null}
           <Body blocks={interview.body} />
         </div>
       </div>
