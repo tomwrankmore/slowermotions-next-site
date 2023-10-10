@@ -22,9 +22,9 @@ export async function getInterviews(): Promise<Interview[]> {
 
   return createClient(clientConfig).fetch(
     groq`*[_type == "interview"]|order(orderRank){
-      projectCategory->,
       _id,
       _createdAt,
+      projectCategory->{categoryTitle},
       title,
       "slug": slug.current,
       // "image": image.asset->url,
