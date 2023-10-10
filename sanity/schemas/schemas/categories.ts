@@ -5,8 +5,8 @@ const categories = {
   type: "document",
   fields: [
     {
-      name: "category",
-      title: "Category",
+      name: "categoryTitle",
+      title: "Category Title",
       type: "string",
     },
   ],

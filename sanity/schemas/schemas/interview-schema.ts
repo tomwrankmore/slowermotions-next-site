@@ -1,4 +1,7 @@
-import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+import {
+  orderRankField,
+  orderRankOrdering,
+} from "@sanity/orderable-document-list";
 
 const interview = {
   name: "interview",
@@ -8,41 +11,39 @@ const interview = {
   fields: [
     orderRankField({ type: "interview" }),
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      name: "title",
+      title: "Title",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the project',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      description:
+        "Some frontend will require a slug to be set to be able to show the project",
       options: {
-        source: 'title',
-        maxLength: 96
-      }
+        source: "title",
+        maxLength: 96,
+      },
     },
     {
-      title: 'Category',
-      name: 'category',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: {type: 'categories'}
-        }
-      ]
+      name: 'projectCategory',
+      title: 'Project Category',
+      type: 'reference',
+      to: {type: 'categories'},
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      description: 'You can use this field to schedule projects where you show them',
-      type: 'datetime'
+      name: "publishedAt",
+      title: "Published at",
+      description:
+        "You can use this field to schedule projects where you show them",
+      type: "datetime",
     },
     {
       name: "mixUrl",
       title: "Mix URL",
-      description: 'If this is a page that displays a mix, chuck the full URL in here.',
+      description:
+        "If this is a page that displays a mix, chuck the full URL in here.",
       type: "url",
     },
     {
@@ -64,11 +65,11 @@ const interview = {
       type: "blockContent",
     },
     {
-      name: 'relatedProjects',
-      title: 'Related projects',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'interview'}}]
-    }
+      name: "relatedProjects",
+      title: "Related projects",
+      type: "array",
+      of: [{ type: "reference", to: { type: "interview" } }],
+    },
   ],
 };
 

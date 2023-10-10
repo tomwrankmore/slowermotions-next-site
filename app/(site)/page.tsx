@@ -10,8 +10,9 @@ export default async function Home() {
       <ul className="w-full md:w-fit">
         {interviews.map((interview) => {
           return (
-            <li key={interview._id} className="">
-              <Link href={`/interviews/${interview.slug}`} className="mb-2 text-sm block md:whitespace-nowrap hover:underline">
+            <li key={interview._id} className="flex text-sm mb-2 items-center">
+              <p className="mr-1 font-bold">{interview.projectCategory.categoryTitle} //</p>
+              <Link href={`/interviews/${interview.slug}`} className="hover:underline">
                 {interview?.title}
               </Link>
             </li>

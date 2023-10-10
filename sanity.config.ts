@@ -1,4 +1,5 @@
 import { defineConfig } from "sanity";
+import {visionTool} from '@sanity/vision'
 import { deskTool, StructureBuilder } from "sanity/desk";
 import schemas from "./sanity/schemas";
 import { myStructure } from "./sanity/components/deskStructure";
@@ -12,6 +13,11 @@ const config = defineConfig({
   plugins: [
     deskTool({
       structure: myStructure
+    }),
+    visionTool({
+      // Note: These are both optional
+      defaultApiVersion: 'v2021-10-21',
+      defaultDataset: 'production',
     }),
   ],
   schema: { types: schemas },

@@ -22,9 +22,9 @@ export async function getInterviews(): Promise<Interview[]> {
 
   return createClient(clientConfig).fetch(
     groq`*[_type == "interview"]|order(orderRank){
+      projectCategory->,
       _id,
       _createdAt,
-      name,
       title,
       "slug": slug.current,
       // "image": image.asset->url,
@@ -42,8 +42,8 @@ export async function getInterview(slug: string): Promise<Interview> {
     groq`*[_type == "interview" && slug.current == $slug][0]{
       _id,
       _createdAt,
-      name,
       title,
+      projectCategory[]->{categoryTitle},
       "slug": slug.current,
       // "image": image.asset->url,
       mixUrl,
