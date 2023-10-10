@@ -4,7 +4,7 @@ const yyyy = today.getFullYear();
 const Footer = () => {
   return (
     <footer>
-      <p className="text-xs text-center">&copy; {yyyy}</p>
+      <p className="text-xs text-center">&copy; Slower Motions {yyyy}</p>
     </footer>
   );
 };
