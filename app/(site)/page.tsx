@@ -7,13 +7,14 @@ export default async function Home() {
 
   return (
     <div>
+      <p className="text-category-mix hidden">Mixes</p>
+      <p className="text-category-interview hidden">Interviews</p>
       <ul className="w-full md:w-fit">
         {interviews.map((interview) => {
-          console.log('fdfdvf:', interview.projectCategory.categoryTitle)
           return (
             <li key={interview._id} className="flex text-sm mb-2 items-center">
-              <p className="font-bold">{interview.projectCategory.categoryTitle} {'//'}{' '}</p>
-              <Link href={`/interviews/${interview.slug}`} className="hover:underline">
+              <p className={`text-category-${interview.projectCategory.categoryTitle.toLowerCase()}`}>{interview.projectCategory.categoryTitle} &nbsp;</p>
+              <Link href={`/interviews/${interview.slug}`} className="hover:underline text-gray-400">
                 {interview?.title}
               </Link>
             </li>
