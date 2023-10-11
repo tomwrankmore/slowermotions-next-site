@@ -43,7 +43,7 @@ export async function getInterview(slug: string): Promise<Interview> {
       _id,
       _createdAt,
       title,
-      projectCategory[]->{categoryTitle},
+      projectCategory->{categoryTitle},
       "slug": slug.current,
       // "image": image.asset->url,
       mixUrl,

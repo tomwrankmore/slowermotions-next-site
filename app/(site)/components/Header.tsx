@@ -26,7 +26,7 @@ export default async function Header() {
             </Link>
           );
         })} */}
-        <Link href="/archive" className="hover:underline text-sm lowercase">
+        <Link href="/" className="hover:underline text-sm lowercase">
           archive
         </Link>
         {/* <Link href="contact" className="hover:underline text-sm lowercase">
